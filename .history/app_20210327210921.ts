@@ -23,13 +23,13 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next)
+app.use(function(req, res, next) 
 {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err:createError.HttpError, req:express.Request, res:express.Response, next:express.NextFunction)
+app.use(function(err:createError.HttpError, req:express.Request, res:express.Response, next:express.NextFunction) 
 {
   // set locals, only providing error in development
   let message = err.message;
